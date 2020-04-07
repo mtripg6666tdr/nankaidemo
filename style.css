@@ -1,0 +1,8 @@
+div#main_app {
+    background-color: white;
+    border: 1px black solid;
+}
+div#main_app p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
