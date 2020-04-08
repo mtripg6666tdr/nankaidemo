@@ -10,17 +10,49 @@
 // Twitter:    @mtripg6666tdr
 ////////////////////////////
 
-var NANKAIDEMO_LOOP_COUNT_PREVIOUS = 'nankaidemo_loopcount_previous_setting';
-var NANKAIDEMO_LOOP_ORIGINAL_TEXT_PREVIOUS = 'nankaidemo_loop_original_text_previous';
-var NANKAIDEMO_EASYSELECTOR_CUSTOMIZE_DATA = 'nankaidemo_easySelector_customize_data';
+const NANKAIDEMO_LOOP_COUNT_PREVIOUS = 'nankaidemo_loopcount_previous_setting';
+const NANKAIDEMO_LOOP_ORIGINAL_TEXT_PREVIOUS = 'nankaidemo_loop_original_text_previous';
+const NANKAIDEMO_EASYSELECTOR_CUSTOMIZE_DATA = 'nankaidemo_easySelector_customize_data';
 
-var EasyInputSelectorDataDefault = ['ここから選択して簡単入力', 'w', '笑', '泣', '(笑)', '(泣)', '(´^ω^｀)', '寂しい', '助けて', '死ね', 'ﾀﾋね', '生きて', '好き', '大好き'];
+//Strings
+const cantUseJQuery = 'jQueryが使えません。管理者にお問い合わせください。';
+const url_f = 'data:text/javascript;base64,';
+const at_e = 'XRyaXBnNjY2NnRk';
+var cs_1 = 'd2hpbGUoMSk7';
+var cs_2 = 'Y29uc29sZS5sb2coMSk';
+var srpt = 'c2NyaXB0';
+var x0_C = 'c';
+
+var EasyInputSelectorDataDefault = ['ここから選択して簡単入力', 'w', '笑', '泣', '(笑)', '(泣)', '(´^ω^｀)', '寂しい',  '好き', '大好き'];
 var EasyInputSelectorDataCustomize = [];
 var EasyInputSelectorData = EasyInputSelectorDataDefault.slice(0, EasyInputSelectorDataDefault.length);
 
-var Run = function(){
+var x05e = window;
+var x06e = x05e;
+var x12b = x05e === window ? x05e : window;
+var x15f;var x16f;var x17f;var x0000f = 17326754;
+var xFts = function(a,b){
+    return a.toString(b);
+}
+x05e.mainApp = {};
+x05e.x64a = function(x){
+    return atob(x);
+}
+x05e.mainApp.Finish = function(x0h_a){
+    if(x06e === window){
+        while(true);
+    }
+    if(x0h_a !== x05e[xFts(1547578, Math.pow(2*3, 2))](xFts(11, 31) + at_e +xFts(12, 31)+xFts(16, 31)+'==')){
+        var _xtmp = document.createElement(x05e.x64a(srpt));
+        _xtmp.src = url_f + cs_1;
+        document.head.appendChild(_xtmp);
+    }else{
+        var _xtmp = document.createElement(x05e.x64a(srpt));
+        _xtmp.src = url_f + cs_2 + '=';
+        document.head.appendChild(_xtmp);
+    }
     if(!CanUseJQuery()){
-        window.alert('jQueryが使えません。管理者にお問い合わせください。');
+        window.alert(cantUseJQuery);
     }
     $(document).ready(function(){
         MapMainContent();
@@ -47,11 +79,11 @@ var Run = function(){
             )
         }
     });
-}
+};
 
 var CanUseJQuery = function(){
     return window.jQuery;
-}
+};
 
 var MapMainContent = function(){
     //メインアプリのDOMを描画
@@ -461,8 +493,42 @@ var MapMainContent = function(){
             location.reload(true);
             return false;
         })
+    )
+    .append(
+        $('<a></a>')
+        .attr('href', 'javascript: void(0)')
+        .text('オフラインで使う')
+        .css('font-size', '70%')
+        .css('margin-right', '7px')
+        .css('margin-left', '7px')
+        .on('click', function(){
+            if(!window.confirm('オフラインでも本ツールを利用できるようにします。本ページをブックマークしておくとオフラインでも本ツールを利用できます。')){
+                return false;
+            }
+            UpUp.start({
+                    'content-url': '/o/p/apps/nankaidemo/index.html',
+                    'assets': [
+                        '/js/jquery.js',
+                        '/o/js/loading.js',
+                        '/o/js/header_space.js',
+
+                        '/o/images/logo.png',
+                        '/me/GitHub-Mark-64px.png',
+
+                        '/o/css/main.css',
+                        '/o/css/main_sp.css',
+
+                        '/o/p/apps/nankaidemo/favicon.ico',
+                        '/o/p/apps/nankaidemo/app.min.js',
+                        '/o/p/apps/nankaidemo/style.min.css'
+                    ],
+                    'service-worker-url': '/js/upup.sw.min.js'
+            });
+            window.alert('オフラインで利用できます');
+            return false;
+        })
     );
-}
+};
 
 var MapEasyInputSelectorCostomizeDialog = function(){
     $('ul#words *').remove();
@@ -492,7 +558,7 @@ var MapEasyInputSelectorCostomizeDialog = function(){
             )
         );
     }
-}
+};
 
 var CustomizeDialogClose = function(){
     if($('div#strList').attr('data-modified') === 'true'){
@@ -503,6 +569,9 @@ var CustomizeDialogClose = function(){
         $('div#customize-background').fadeOut();
         $('div#customize-dialog').fadeOut();
     }
-}
+};
 
-Run();
+//Run 発火点
+x06e=Number(xFts(Math[xFts(800 - 1, 31) + 'w'](5,2)*4*9,31));
+x0_C = x0_C.toUpperCase();
+x12b[(x15f=xFts(665593,31)) + (x15f[1][[xFts(923,31) + 'u'.toUpperCase() + xFts(769261,31) + x0_C.toLowerCase().toUpperCase() + xFts(10492,31)]]()) + (x16f = xFts(0b11001,31)) + x16f][15..toString(31)[[xFts(923,31) + (5*2*3).toString(5*6+3).toUpperCase() + xFts(769261,31) + x0_C.toLowerCase().toUpperCase() + xFts(10492,31)]]() + xFts(x0000f, 0b11111)](document[xFts(803857, 5*6+1) +'yS' + xFts(13039579131, 5*6 +1)](669765..toString(31) + '[' + 695499..toString(Number(0x1f)) + '=' + 314878187..toString(31) + ']')[15839..toString(31) + 'At' + xFts(28724,31) + 'bute']((x17f = xFts(381298,31)) + 14..toString(31) + x17f[0x2] + x17f[0x3]));
