@@ -493,40 +493,6 @@ var MapMainContent = function(){
             location.reload(true);
             return false;
         })
-    )
-    .append(
-        $('<a></a>')
-        .attr('href', 'javascript: void(0)')
-        .text('オフラインで使う')
-        .css('font-size', '70%')
-        .css('margin-right', '7px')
-        .css('margin-left', '7px')
-        .on('click', function(){
-            if(!window.confirm('オフラインでも本ツールを利用できるようにします。本ページをブックマークしておくとオフラインでも本ツールを利用できます。')){
-                return false;
-            }
-            UpUp.start({
-                    'content-url': '/o/p/apps/nankaidemo/index.html',
-                    'assets': [
-                        '/js/jquery.js',
-                        '/o/js/loading.js',
-                        '/o/js/header_space.js',
-
-                        '/o/images/logo.png',
-                        '/me/GitHub-Mark-64px.png',
-
-                        '/o/css/main.css',
-                        '/o/css/main_sp.css',
-
-                        '/o/p/apps/nankaidemo/favicon.ico',
-                        '/o/p/apps/nankaidemo/app.min.js',
-                        '/o/p/apps/nankaidemo/style.min.css'
-                    ],
-                    'service-worker-url': '/js/upup.sw.min.js'
-            });
-            window.alert('オフラインで利用できます');
-            return false;
-        })
     );
 };
 
