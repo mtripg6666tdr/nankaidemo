@@ -7,47 +7,61 @@
     <meta name="author" content="mtripg6666tdr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ツール「何回でも」は、指定された文字列を好きなだけ繰り返して表示できるツールです。草をはやしたいときなどにご利用いただけます。安心・安全・無料でダウンロードやインストール不要でいつでも使えるWebアプリです。">
-    <meta name="keywords" content="何回でも,便利ツール,ツール,みっくすくらっぷ,mtripg6666tdr,scrpg,Webアプリ">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mtripg6666tdr">
     <meta name="twitter:creator" content="@mtripg6666tdr">
-    <meta property="twitter:image" content="https://scrpg.tyanoyu.net/o/p/apps/nankaidemo/favicon.png">
+    <meta property="twitter:image" content="https://web.usamyon.moe/nankaidemo/favicon.png">
     <meta property="og:title" content="ツール「何回でも」 - みっくすくらっぷ">
     <meta property="og:description" content="ツール「何回でも」は、指定された文字列を好きなだけ繰り返して表示できるツールです。草をはやしたいときなどにご利用いただけます。安心・安全・無料でダウンロードやインストール不要でいつでも使えるWebアプリです。">
-    <meta property="og:image" content="https://scrpg.tyanoyu.net/o/p/apps/nankaidemo/favicon.png">
+    <meta property="og:image" content="https://web.usamyon.moe/nankaidemo/favicon.png">
     <title>何回でも - みっくすくらっぷ</title>
     <!--アイコン等の指定-->
-    <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="favicon.png">
+    <link rel="icon" href="./favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="./nankaidemo/favicon.png">
     <!--スタイル指定-->
-    <link rel="stylesheet" href="/o/css/main.css">
-    <link rel="stylesheet" href="/o/css/main_sp.css" media="only screen and (max-device-width:481px)">
     <link rel="stylesheet" href="style.min.css">
     <style type="text/css">
+        body {
+            background-color: azure;
+            margin: 0px;
+        }
+        div.main_container {
+            margin-top: 3rem;
+        }
+        div.container_0_0 {
+            width: 80%;
+            margin: 0px auto;
+        }
+        footer>p {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        footer>p>img {
+            width: 1.6rem;
+            vertical-align: middle;
+        }
+        footer>p:nth-last-child(1) {
+            user-select: none;
+            font-size: 1rem;
+        }
     </style>
     <!--スクリプト指定-->
-    <script type="text/javascript" charset="utf-8" src="/js/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/o/js/header_space.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/js/upup.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./vendor/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./upup.min.js"></script>
     <script type="text/javascript">
+        function resolvePath(relative){
+            return new URL(relative, location.href).href;
+        }
         UpUp.start({
                 'content-url': 'index.html',
-                'assets': [
-                    '/js/jquery.js',
-                    '/o/js/loading.js',
-                    '/o/js/header_space.js',
-
-                    '/o/images/logo.png',
-                    '/me/GitHub-Mark-64px.png',
-
-                    '/o/css/main.css',
-                    '/o/css/main_sp.css',
-
-                    '/o/p/apps/nankaidemo/favicon.ico',
-                    '/o/p/apps/nankaidemo/app.min.js',
-                    '/o/p/apps/nankaidemo/style.min.css'
-                ]
+                assets: [
+                    './vendor/jquery.min.js',
+                    './images/github.png',
+                    './favicon.ico',
+                    './app.min.js',
+                    './style.min.css'
+                ].map(resolvePath)
         });
     </script>
     <!--アプリのソースコードは軽量版(通常版はapp.js)-->
@@ -59,19 +73,9 @@
             <div class="header_nav_title">
                 <a href="/index.html"><img src="/o/images/logo.png" alt="scrpg .tyanoyu.netのトップへ"></a>
             </div>
-            <div class="header_nav_shortcut">
-                <a href="javascript: void(0)" onclick="$(this).parent().parent().parent().fadeOut();return false;"><span>閉じる</span></a>
-            </div>
             <hr class="header_nav_bottom_hr">
         </div>
     </header>
-    <div class="load_cover" id="loading_sign">
-        <p id="Loading_A">Loading</p>
-        <noscript>
-            <p id="Loading_B">JavaScriptを有効にしてください。</p>
-        </noscript>
-    </div>
-    <div class="header_nav_space"></div>
     <div class="main_container">
         <div class="container_0">
             <div class="container_0_0">
@@ -83,9 +87,7 @@
                 <p>指定された文字列を指定回数だけ繰り返して表示できます。繰り返し打つのが大変な時にご活用ください。</p>
                 <p>
                     <small>
-                        <span>なお本ツールは</span>
-                        <a href="/p/nankaidemo/about.htm">旧版scrpg.tyanoyu.netにあったツール(サポート終了)</a>
-                        <span>の移植版です。</span>
+                        <span>本ツールは旧版scrpg.tyanoyu.netにあったツール(サポート終了)の移植版です。</span>
                     </small>
                 </p>
                 <div id="main_app">
@@ -97,23 +99,15 @@
         </div>
     </div>
     <footer>
-        <p id="github_link">
-            <a href="https://github.com/mtripg6666tdr/nankaidemo/" target="_blank">
-                <img src="/images/Logos/Github/raw/GitHub-Mark-64px.png" class="github_icon" alt="GitHub">
-            </a>
-        </p>
-        <p id="os_note">
-            <span>オープンソースに係る表記：本Webアプリの</span>
+        <p>
+            <img src="./images/github.png" class="github_icon" alt="GitHub">
+            <span>オープンソースに係る表記: 本Webアプリの</span>
             <a href="https://github.com/mtripg6666tdr/Nankaidemo/" target="_blank">ソースコード</a>
             <span>は</span>
             <a href="https://github.com/mtripg6666tdr/Nankaidemo/blob/master/LICENSE.md" target="_blank">GNU General Public License v3.0</a>
             <span>のもとでユーザーに提供されます。</span>
         </p>
-        <p>Copyright 2016-2021 mtripg6666tdr All Rights Reserved.</p>
+        <p>Copyright &copy; 2016-2022 mtripg6666tdr All Rights Reserved.</p>
     </footer>
-    <!--バックスクリプト指定-->
-    <script type="text/javascript" charset="utf-8" src="/o/js/loading.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/o/js/base.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/o/js/ga.js"></script>
 </body>
 </html>
